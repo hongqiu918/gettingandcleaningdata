@@ -10,8 +10,8 @@ The aim of of the code is to achieve the following goal:
 4)Appropriately labels the data set with descriptive variable names. 
 5)Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
-Firstly, I read the test dataset and train dataset by read.csv command, respectively. After, the subject and acitivity 
-type are appended to the left side of test dataframe or train dataframe just created by cbind command.
+Firstly, I read the test dataset and train dataset by read.csv command, respectively. The subject and acitivity 
+type are then appended to the left side of test dataframe or train dataframe just created by cbind command.
 Then I merge this two dataframe by rbind command to be "data".
 
 After that, I get the names 561 features and combine them with subject and activity to form a vector and this was assigned
