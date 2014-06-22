@@ -47,6 +47,7 @@ datafinal[,2]<-gsub("6", "LAYING",datafinal[,2],fixed=T)
 
 #caculate the average of each variable for each activity and each subject
 variable<-as.vector(names(datafinal[,3:ncol(datafinal)]))
+library(reshape2)
 dataMelt<-melt(datafinal, id=c("subject","activity"), measure.vars=variable)
 datasubjectMean<-dcast(dataMelt,subject~variable, mean)
 dataactivityMean<-dcast(dataMelt,activity~variable, mean)
